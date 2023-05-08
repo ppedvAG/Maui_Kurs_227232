@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiKurs", "MauiKurs\MauiKu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personendatenbank", "Personendatenbank\Personendatenbank.csproj", "{75385F77-D1AB-4EA5-87A3-0B8E652D1AB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorMauiBsp", "BlazorMauiBsp\BlazorMauiBsp.csproj", "{858C946E-1E54-41B7-BAE7-DFA111CF1658}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,12 @@ Global
 		{75385F77-D1AB-4EA5-87A3-0B8E652D1AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75385F77-D1AB-4EA5-87A3-0B8E652D1AB3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{75385F77-D1AB-4EA5-87A3-0B8E652D1AB3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{858C946E-1E54-41B7-BAE7-DFA111CF1658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{858C946E-1E54-41B7-BAE7-DFA111CF1658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{858C946E-1E54-41B7-BAE7-DFA111CF1658}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{858C946E-1E54-41B7-BAE7-DFA111CF1658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{858C946E-1E54-41B7-BAE7-DFA111CF1658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{858C946E-1E54-41B7-BAE7-DFA111CF1658}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

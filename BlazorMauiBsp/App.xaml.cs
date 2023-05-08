@@ -1,4 +1,4 @@
-﻿namespace Personendatenbank
+﻿namespace BlazorMauiBsp
 {
     public partial class App : Application
     {
@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new Pages.Pg_AddPerson();
+            MainPage = new MainPage();
         }
     }
 }

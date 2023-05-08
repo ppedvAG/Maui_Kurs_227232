@@ -49,11 +49,27 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\add.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="XamlGrundlagen.xaml">
+	  <Compile Update="M04_Controls.xaml.cs">
+	    <DependentUpon>M04_Controls.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="M03_XamlGrundlagen.xaml.cs">
+	    <DependentUpon>M03_XamlGrundlagen.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="M04_Controls.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="M03_XamlGrundlagen.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
