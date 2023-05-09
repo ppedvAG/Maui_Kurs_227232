@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+             x:Class="MauiKurs.Resources_Styles"
+             Title="Resources_Styles">
+    <VerticalStackLayout x:Name="Sly_Main">
+        <VerticalStackLayout.Resources>
+            <x:Double x:Key="Dbl_FontSize">25.0</x:Double>
+            <Color x:Key="Primary">#FFE4F6</Color>
+
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="BackgroundColor" Value="LightGreen"/>
+                <Setter Property="FontFamily" Value="Comic Sans MS"/>
+                <Setter Property="TextColor" Value="Red"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="Sty_Lbl_01">
+                <Setter Property="FontSize" Value="{StaticResource Dbl_FontSize}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Gray300}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="Sty_Lbl_02" BasedOn="{StaticResource Sty_Lbl_01}">
+                <Setter Property="FontFamily" Value="Arial"/>
+            </Style>
+        </VerticalStackLayout.Resources>
+        
+        <DatePicker Date="{x:Static sys:DateTime.Now}"/>
+        <Label Text="HALLO" FontSize="{x:Static sys:Math.PI}"/>
+
+        <Label Text="Moin Moin" FontSize="{StaticResource Dbl_FontSize}"
+               BackgroundColor="{StaticResource Primary}"/>
+
+        <Button Text="Change" x:Name="Btn_Change" 
+                Clicked="Btn_Change_Clicked" BackgroundColor="{DynamicResource Primary}"/>
+        
+        <Label Text="HALLO" TextColor="Blue"/>
+        <Label Text="HALLO"/>
+        <Label Text="HALLO" Style="{StaticResource Sty_Lbl_02}"/>
+        <Label Text="HALLO" Style="{StaticResource Sty_Lbl_01}"/>
+
+    </VerticalStackLayout>
+</ContentPage>
