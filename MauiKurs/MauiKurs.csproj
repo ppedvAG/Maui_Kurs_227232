@@ -57,6 +57,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="M05_Layouts.xaml.cs">
+	    <DependentUpon>M05_Layouts.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="M04_Controls.xaml.cs">
 	    <DependentUpon>M04_Controls.xaml</DependentUpon>
 	  </Compile>
@@ -66,7 +69,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Layouts.xaml">
+	  <MauiXaml Update="M05_Layouts.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="M04_Controls.xaml">

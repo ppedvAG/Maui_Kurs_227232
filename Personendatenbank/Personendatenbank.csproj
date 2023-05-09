@@ -54,6 +54,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Lab05_Layoutübungen\Pg_AbsoluteLayoutLab.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Lab05_Layoutübungen\Pg_GridLab.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Pg_AddPerson.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
