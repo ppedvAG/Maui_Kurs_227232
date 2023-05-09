@@ -9,6 +9,7 @@ public partial class Resources_Styles : ContentPage
 
     private void Btn_Change_Clicked(object sender, EventArgs e)
     {
-		Sly_Main.Resources["Primary"] = new Color(11, 123, 234);
+        //Codeseitiger Zugriff auf Ressource
+        Sly_Main.Resources["Primary"] = new Color(11, 123, 234);
     }
 }

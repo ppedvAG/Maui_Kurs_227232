@@ -68,7 +68,7 @@
     <!--#endregion-->
 
     <!--#region Lab 05-->
-    <VerticalStackLayout Margin="10"
+    <!--<VerticalStackLayout Margin="10"
                          Spacing="15">
         
         <Label x:Name="Lbl_Header"
@@ -134,6 +134,71 @@
                     Clicked="Btn_Add_Clicked"
                 VerticalOptions="End"/>
         
+    </VerticalStackLayout>-->
+    <!--#endregion-->
+
+    <!--#region Lab 06-->
+    <VerticalStackLayout Margin="10"
+                         Spacing="15">
+
+        <Label x:Name="Lbl_Header"
+               Text="Gib die Daten der Person ein"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               FontSize="Large"
+               HorizontalTextAlignment="Center"/>
+
+        <Grid ColumnSpacing="5"
+              RowSpacing="10"
+              Padding="10"
+              ColumnDefinitions="Auto,*"
+              RowDefinitions="*,*,Auto,*">
+
+            <Label x:Name="Lbl_Name"
+                   Text="Name:"/>
+            <Entry x:Name="Ety_Name" 
+                   Grid.Column="1"
+                   Placeholder="z.B. Max Mustermann"
+                   Completed="Ety_Name_Completed"/>
+
+            <Label x:Name="Lbl_Birthdate"
+                   Grid.Row="1"
+                   Text="Geburtsdatum:"/>
+            <DatePicker x:Name="Dpr_Birthdate"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        MinimumDate="01.01.1900"
+                        DateSelected="Dpr_Birthdate_DateSelected"/>
+
+            <Label x:Name="Lbl_Gender"
+                   Grid.Row="2"
+                   Text="Geschlecht:"
+                   VerticalOptions="Start"/>
+            <Picker x:Name="Pkr_Gender"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Title="Wähle Geschlecht aus">
+                <Picker.Items>
+                    <x:String>Männlich</x:String>
+                    <x:String>Weiblich</x:String>
+                    <x:String>Divers</x:String>
+                </Picker.Items>
+            </Picker>
+
+
+            <Label x:Name="Lbl_Married"
+                   Grid.Row="3"
+                   Text="Verheiratet:"/>
+            <Switch x:Name="Swt_Married"
+                    Grid.Row="3"
+                    Grid.Column="1"/>
+
+        </Grid>
+
+        <Button x:Name="Btn_Add"
+                    Text="Hinzufügen/Ändern"
+                    Clicked="Btn_Add_Clicked"/>
+
     </VerticalStackLayout>
     <!--#endregion-->
 
