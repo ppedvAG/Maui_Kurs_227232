@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiKurs.Layouts"
+             Title="Layouts">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Frame BorderColor="Black" Margin="3" Padding="3">
+                <StackLayout HeightRequest="300"
+                         Orientation="Vertical"
+                             Spacing="10">
+
+                    <Label Text="1st"
+                       BackgroundColor="Red"/>
+                    <Label Text="2nd"
+                       BackgroundColor="Green"
+                         VerticalOptions="FillAndExpand"
+                           Margin="0,10"/>
+                    <Label Text="3rd"
+                       BackgroundColor="Blue"
+                           VerticalOptions="FillAndExpand"/>
+                    <Label Text="4th"
+                       BackgroundColor="Yellow"/>
+
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="Black" Margin="3" Padding="3">
+                <Grid HeightRequest="300"
+                      ColumnDefinitions="100, *"
+                      RowSpacing="10"
+                      ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="1st"
+                           BackgroundColor="Red"/>
+                    <Label Text="2nd"
+                           BackgroundColor="Green"
+                            VerticalOptions="FillAndExpand"
+                           Margin="0,10"
+                           Grid.Column="1"/>
+                    <Label Text="3rd"
+                       BackgroundColor="Blue"
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           Grid.Row="1"/>
+                    <Label Text="4th"
+                           BackgroundColor="Yellow"
+                           Grid.Row="2"
+                           Grid.ColumnSpan="2"/>
+
+                    <Button Text="Verschieben" Grid.Row="3"
+                            x:Name="Btn_Verschieben"
+                            Clicked="Btn_Verschieben_Clicked"/>
+
+                </Grid>
+            </Frame>
+            <Frame BorderColor="Black" Margin="3" Padding="3">
+                <AbsoluteLayout HeightRequest="300">
+
+                    <Label Text="1st"
+                            BackgroundColor="Red"
+                           AbsoluteLayout.LayoutFlags="All"
+                           AbsoluteLayout.LayoutBounds="0.5, 0.2, 0.1, 0.3"/>
+                    <Label Text="2nd"
+                            BackgroundColor="Green"
+                            VerticalOptions="FillAndExpand"
+                           AbsoluteLayout.LayoutFlags="None"
+                           AbsoluteLayout.LayoutBounds="100, 200, 50, 60"
+                           Margin="0,10"/>
+                    <Label Text="3rd"
+                            BackgroundColor="Blue"
+                           VerticalOptions="FillAndExpand"
+                           AbsoluteLayout.LayoutFlags="SizeProportional"
+                           AbsoluteLayout.LayoutBounds="80, 100, 0.3, 0.2"/>
+                    <Label Text="4th"
+                           BackgroundColor="Yellow"/>
+
+                </AbsoluteLayout>
+            </Frame>
+
+            <Frame BorderColor="Black" Margin="3" Padding="3">
+                <FlexLayout HeightRequest="300"
+                            Direction="Row"
+                            JustifyContent="SpaceAround"
+                            AlignItems="Stretch"
+                            Wrap="Wrap">
+
+                    <Label Text="1st"
+                            BackgroundColor="Red"
+                           FlexLayout.Basis="30%"/>
+                    <Label Text="2nd"
+                            BackgroundColor="Green"/>
+                    <Label Text="3rd"
+                            BackgroundColor="Blue"/>
+                    <Label Text="4th"
+                           BackgroundColor="Yellow"
+                           WidthRequest="200"
+                           FlexLayout.AlignSelf="Center"/>
+                    <Label Text="5th"
+                           BackgroundColor="Orange"/>
+                    <Label Text="6th"
+                           BackgroundColor="Purple"
+                           WidthRequest="200"/>
+                    <Label Text="7th"
+                           BackgroundColor="Black"
+                           FlexLayout.Order="-1"/>
+
+                </FlexLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

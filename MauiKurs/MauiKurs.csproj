@@ -66,6 +66,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Layouts.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="M04_Controls.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
