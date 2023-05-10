@@ -4,6 +4,7 @@
 <!--Im Root-Container werden die in diesem Dokument benutzten Namespaces definiert, sowie der Verweis auf die anhängige Klasse (CodeBehind)-->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:loc="clr-namespace:MauiKurs.Loc"
              x:Class="MauiKurs.XamlGrundlagen"
              Title="XamlGrundlagen">
 
@@ -36,6 +37,9 @@
 
             <!--Viele UI-Elemente hat eien Standart-Property, auf die direkt zugegriffen werden kann (meißt Text, Children, Content)-->
             <Label>Hallo Welt</Label>
+
+
+            <Label x:Name="Lbl_Loc" Text="{x:Static loc:Strings.Lbl_Loc_Text}"/>
         </StackLayout>
 
     </ContentPage.Content>

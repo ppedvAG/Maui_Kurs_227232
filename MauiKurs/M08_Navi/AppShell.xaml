@@ -4,35 +4,69 @@
        xmlns:main="clr-namespace:MauiKurs"
        xmlns:bindings="clr-namespace:MauiKurs.Bindings"
        xmlns:navi="clr-namespace:MauiKurs.Navi"
-             x:Class="MauiKurs.Navi.AppShell"
+             xmlns:flyout="clr-namespace:MauiKurs.Navi.FlyoutBsp"
+       xmlns:osspez="clr-namespace:MauiKurs.Plattformspezifika"
+       xmlns:mvvm="clr-namespace:MauiKurs.MVVM.View"
+       x:Class="MauiKurs.Navi.AppShell"
              Title="AppShell">
+    <!--Die Shell bietet eine Routing-Navigation für alle angemeldeten Seiten (vgl. RoutingBsp.xaml)-->
+    <!--FlyoutItems generieren ein Flyout-Menü, Tab und TabBar generieren eine Register-Navigation-->
 
     <FlyoutItem Title="MAUI-Grundlagen"
                 Route="grundlagen">
-            <ShellContent ContentTemplate="{DataTemplate main:XamlGrundlagen}"
-                      Route="xaml"
-                      Title="XAML"/>
-            <ShellContent ContentTemplate="{DataTemplate main:Controls}"
-                      Route="controls"
-                      Title="Controls"/>
-        <ShellContent ContentTemplate="{DataTemplate main:Layouts}"
-                      Route="layouts"
-                      Title="Layouts"/>
+        <ShellContent Title="XAML"
+                      ContentTemplate="{DataTemplate main:XamlGrundlagen}"
+                      Route="xaml"/>
+        <ShellContent Title="Controls"
+                      ContentTemplate="{DataTemplate main:Controls}"
+                      Route="controls"/>
+        <ShellContent Title="Layouts"
+                      ContentTemplate="{DataTemplate main:Layouts}"
+                      Route="layouts"/>
     </FlyoutItem>
-
-    <ShellContent ContentTemplate="{DataTemplate main:Resources_Styles}"
-                      Route="resources"
-                      Title="Ressourcen und Styles"/>
-
-    <FlyoutItem Title="Bindungen">
+    
+    <FlyoutItem Title="M06_ResourcesAndStyles">
+        <ShellContent Route="resources"
+                      ContentTemplate="{DataTemplate main:Resources_Styles}"/>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="M07_Bindings">
         <ShellContent Route="bindings">
             <bindings:Bindings/>
         </ShellContent>
     </FlyoutItem>
+    
+    <FlyoutItem Title="M08_Navigation"
+                Route="navi">
+        <ShellContent Title="Routing" 
+                      Route="route"
+                      ContentTemplate="{DataTemplate navi:RoutingBsp}"/>
+        <!--Shell ist momentan nicht kompatibel mit den anderen (unten stehenden) Navigationsarten -> generiert Exception-->
+        <ShellContent Title="NavigationPage"
+                      Route="navigationpage"
+                      ContentTemplate="{DataTemplate navi:NavPageBsp}"/>
+        <ShellContent Title="TabbedPage"
+                      Route="tabbedpage"
+                      ContentTemplate="{DataTemplate navi:TabbedPageBsp}"/>
+        <ShellContent Title="FlyoutPage"
+                      Route="flyoutpage"
+                      ContentTemplate="{DataTemplate flyout:FlyoutPage1}"/>
+    </FlyoutItem>
 
-    <ShellContent ContentTemplate="{DataTemplate navi:RoutingBsp}"
-                      Route="routing"
-                      Title="RoutingBsp"/>
+    <FlyoutItem Title="M09_Plattformspezifika">
+        <ShellContent Route="plattform"
+                      ContentTemplate="{DataTemplate osspez:Plattformspezifika}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="MVVM">
+        <ShellContent Route="mvvm"
+                      ContentTemplate="{DataTemplate mvvm:BeispielView}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Gesten">
+        <ShellContent Route="gesten"
+                      ContentTemplate="{DataTemplate main:Gesten}"/>
+    </FlyoutItem>
 
 
     <MenuItem Text="Hilfe"/>

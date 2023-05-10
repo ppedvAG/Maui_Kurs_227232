@@ -9,11 +9,13 @@ public partial class RoutingBsp : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-		Shell.Current.GoToAsync("//grundlagen/controls");
+        //Mittels des GoToAsync-Befehls können in der Shell angemeldete Routen angesteuert werden
+        Shell.Current.GoToAsync("//grundlagen");
     }
 
     private void Button_Clicked_1(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//routeTarget");
+        //Wenn die Ziel-Page es erlaubt (vgl. RouteTargetPage.xaml.cs) können Objekte übertragen werden
+        Shell.Current.GoToAsync($"//navi/routeTarget?RouteItem1={Ety_ItemToSend.Text}");
     }
 }

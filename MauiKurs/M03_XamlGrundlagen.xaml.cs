@@ -4,6 +4,8 @@ public partial class XamlGrundlagen : ContentPage
 {
 	public XamlGrundlagen()
     {
+        Loc.Strings.Culture = new System.Globalization.CultureInfo("en-US");
+
         //Dies verweist auf eine Methode in der (versteckten) automatisch generierten zweiten Klassen-Datei (*.g.i.cs),
         //welche für das Rendering des XAML-Codes verantwortlich ist. InitializeComponent() erstellt die
         //Steuerelement-Objekte und muss daher als erste Methode des Konstruktors bestehen bleiben

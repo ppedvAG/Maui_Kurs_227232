@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new Pages.Pg_AddPerson();
+            MainPage = new AppShell();
         }
     }
 }

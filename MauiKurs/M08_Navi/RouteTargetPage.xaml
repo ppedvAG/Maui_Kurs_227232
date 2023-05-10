@@ -5,8 +5,10 @@
              Title="RouteTargetPage">
     <VerticalStackLayout>
         <Label 
+            x:Name="Lbl_Show"
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            FontSize="Large"/>
     </VerticalStackLayout>
 </ContentPage>
