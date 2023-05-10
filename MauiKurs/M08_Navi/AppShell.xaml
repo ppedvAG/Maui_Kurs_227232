@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:main="clr-namespace:MauiKurs"
+       xmlns:bindings="clr-namespace:MauiKurs.Bindings"
+       xmlns:navi="clr-namespace:MauiKurs.Navi"
+             x:Class="MauiKurs.Navi.AppShell"
+             Title="AppShell">
+
+    <FlyoutItem Title="MAUI-Grundlagen"
+                Route="grundlagen">
+            <ShellContent ContentTemplate="{DataTemplate main:XamlGrundlagen}"
+                      Route="xaml"
+                      Title="XAML"/>
+            <ShellContent ContentTemplate="{DataTemplate main:Controls}"
+                      Route="controls"
+                      Title="Controls"/>
+        <ShellContent ContentTemplate="{DataTemplate main:Layouts}"
+                      Route="layouts"
+                      Title="Layouts"/>
+    </FlyoutItem>
+
+    <ShellContent ContentTemplate="{DataTemplate main:Resources_Styles}"
+                      Route="resources"
+                      Title="Ressourcen und Styles"/>
+
+    <FlyoutItem Title="Bindungen">
+        <ShellContent Route="bindings">
+            <bindings:Bindings/>
+        </ShellContent>
+    </FlyoutItem>
+
+    <ShellContent ContentTemplate="{DataTemplate navi:RoutingBsp}"
+                      Route="routing"
+                      Title="RoutingBsp"/>
+
+
+    <MenuItem Text="Hilfe"/>
+
+</Shell>

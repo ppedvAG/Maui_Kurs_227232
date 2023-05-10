@@ -66,10 +66,13 @@
 	  <Compile Update="M03_XamlGrundlagen.xaml.cs">
 	    <DependentUpon>M03_XamlGrundlagen.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="M06_Resources_Styles.xaml.cs">
+	    <DependentUpon>M06_Resources_Styles.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Bindings\Bindings.xaml">
+	  <MauiXaml Update="M07_Bindings\Bindings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="M05_Layouts.xaml">
@@ -81,7 +84,16 @@
 	  <MauiXaml Update="M03_XamlGrundlagen.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Resources_Styles.xaml">
+	  <MauiXaml Update="M06_Resources_Styles.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="M08_Navi\AppShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="M08_Navi\RouteTargetPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="M08_Navi\RoutingBsp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
