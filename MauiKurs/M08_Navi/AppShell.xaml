@@ -24,18 +24,15 @@
                       ContentTemplate="{DataTemplate main:Layouts}"
                       Route="layouts"/>
     </FlyoutItem>
-    
     <FlyoutItem Title="M06_ResourcesAndStyles">
         <ShellContent Route="resources"
                       ContentTemplate="{DataTemplate main:Resources_Styles}"/>
     </FlyoutItem>
-    
     <FlyoutItem Title="M07_Bindings">
         <ShellContent Route="bindings">
             <bindings:Bindings/>
         </ShellContent>
     </FlyoutItem>
-    
     <FlyoutItem Title="M08_Navigation"
                 Route="navi">
         <ShellContent Title="Routing" 
@@ -52,23 +49,18 @@
                       Route="flyoutpage"
                       ContentTemplate="{DataTemplate flyout:FlyoutPage1}"/>
     </FlyoutItem>
-
     <FlyoutItem Title="M09_Plattformspezifika">
         <ShellContent Route="plattform"
                       ContentTemplate="{DataTemplate osspez:Plattformspezifika}"/>
     </FlyoutItem>
-
-    <FlyoutItem Title="MVVM">
+    <FlyoutItem Title="M10_MVVM">
         <ShellContent Route="mvvm"
                       ContentTemplate="{DataTemplate mvvm:BeispielView}"/>
     </FlyoutItem>
-
-    <FlyoutItem Title="Gesten">
-        <ShellContent Route="gesten"
+    <FlyoutItem Title="M11_Gestures">
+        <ShellContent Route="gestures"
                       ContentTemplate="{DataTemplate main:Gesten}"/>
     </FlyoutItem>
 
-
     <MenuItem Text="Hilfe"/>
-
 </Shell>

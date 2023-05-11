@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MauiKurs.Loc {
+namespace MauiKurs.M11_Loc {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace MauiKurs.Loc {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MauiKurs.Loc.Strings", typeof(Strings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MauiKurs.M11_Loc.Strings", typeof(Strings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,20 @@ namespace MauiKurs.Loc {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Heute ist ein schöner Tag.
+        ///   Looks up a localized string similar to Klick Mich!.
         /// </summary>
-        public static string Lbl_Loc_Text {
+        public static string Btn_String {
             get {
-                return ResourceManager.GetString("Lbl_Loc_Text", resourceCulture);
+                return ResourceManager.GetString("Btn_String", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ZUR VERWENDUNG VGL M11_McSubscriberPage.xaml.
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
     }

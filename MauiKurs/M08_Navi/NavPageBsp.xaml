@@ -8,5 +8,8 @@
                  Spacing="10">
         <Button Text="Open Main" x:Name="Btn_Main" Clicked="Btn_Main_Clicked"/>
         <Button Text="Open Controls" x:Name="Btn_Controls" Clicked="Btn_Controls_Clicked"/>
+
+        <!--M11: Bsp für MessageCenter-Verwendung, vgl. CodeBehind und M11_McSubscriberPage.xaml-->
+        <Button Text="Start Message" Clicked="Button_Clicked"/>
     </StackLayout>
 </ContentPage>

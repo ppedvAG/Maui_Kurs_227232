@@ -37,9 +37,6 @@
 
             <!--Viele UI-Elemente hat eien Standart-Property, auf die direkt zugegriffen werden kann (meißt Text, Children, Content)-->
             <Label>Hallo Welt</Label>
-
-
-            <Label x:Name="Lbl_Loc" Text="{x:Static loc:Strings.Lbl_Loc_Text}"/>
         </StackLayout>
 
     </ContentPage.Content>
